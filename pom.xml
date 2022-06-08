@@ -20,6 +20,10 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
+        <sonar.host.url>http://172.16.238.64:9000/</sonar.host.url>
+        <sonar.login>75fca241f2b8e4297099585897d04a5c8b689965</sonar.login>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
     <dependencies>
@@ -66,6 +70,21 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+         <distributionManagement>
+	
+	    <repository>
+	      <id>nexus</id>
+	      <name>guna</name>
+	      <url>http://172.16.238.77:8081/repository/queuemaster-release/////</url>
+	    </repository>
+	    
+	    <snapshotRepository>
+	      <id>nexus</id>
+	      <name>guna</name>
+	      <url>http://172.16.238.77:8081/repository/queuemaster-snapshot/////</url>
+	    </snapshotRepository>
+	    
+	</distributionManagement>
 
     <build>
         <finalName>queue-master</finalName>
