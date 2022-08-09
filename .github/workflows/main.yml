@@ -12,7 +12,7 @@ on:
     tags:
     - "*"  # run for tags
 
-jobs:
+ jobs:
   test:
     runs-on: ubuntu-latest
     env:
