@@ -11,7 +11,7 @@ on:
     tags:
     - "*"  # run for tags
   jobs:
-  test:
+    test:
     runs-on: ubuntu-latest
     env:
       GROUP: weaveworksdemos 
