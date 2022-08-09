@@ -39,7 +39,6 @@ jobs:
     # Unit test
     - name: Run unit tests
       run: ./test/test.sh unit.py
-
       
     - name: Login to DockerHub
       run: |
