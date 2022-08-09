@@ -20,7 +20,6 @@ on:
     steps:
     - uses: actions/checkout@v2
 
-
        
     # Build
     - name: Build jar files
@@ -31,12 +30,11 @@ on:
     - name: Run unit tests
       run: ./test/test.sh unit.py
 
-   
-   
+      
     - name: Login to DockerHub
       run: |
         echo "${{ secrets.DOCKERHUB_PASS }}" | docker login -u "gunareddy7" --password-stdin
-    #
+    
     # Push to dockerhub
     - name: Push to Docker Hub
       uses: docker/build-push-action@v1
