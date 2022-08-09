@@ -10,8 +10,8 @@ on:
       - "*"  # run for branches
     tags:
       - "*"  # run for tags
-  jobs:
-    test:
+jobs:
+  test:
     runs-on: ubuntu-latest
     env:
       GROUP: weaveworksdemos 
