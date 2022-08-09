@@ -40,6 +40,17 @@ jobs:
     - name: Run unit tests
       run: ./test/test.sh unit.py
       
+  # Build docker image for service
+    - name: Build docker image
+      uses: docker/build-push-action@v1
+      with:
+        push: false
+        dockerfile: docker/queue-master/Dockerfile
+        repository: ${{ env.GROUP }}/${{ env.REPO }}
+        tag_with_ref: true
+        tag_with_sha: true
+        tags: ${{ github.sha }}
+    
     - name: Login to DockerHub
       run: |
         echo "${{ secrets.DOCKERHUB_PASS }}" | docker login -u "gunareddy7" --password-stdin
