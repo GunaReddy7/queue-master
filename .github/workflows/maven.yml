@@ -25,7 +25,7 @@ jobs:
 
     - name: Login to DockerHub
       run: |
-          echo "${{ secrets.DOCKERHUB_PASS }}" | docker login -u "gunareddy" --password-stdin 
+          echo "${{ secrets.DOCKERHUB_PASS }}" | docker login -u "gunareddy7" --password-stdin 
 
 
     - name: Push to Docker Hub
